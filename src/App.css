@@ -1,8 +1,48 @@
-.particle-container{
-  background : #17182f;
+.particle-container {
+  background: #17182f;
   height: 100vh;
 }
+
 canvas {
   display: block;
   vertical-align: bottom;
 }
+
+.man-container {}
+
+#man {
+  color: white;
+  font-size: 150px;
+  -webkit-transition: webkit-transform .8s ease-in-out, left .8s;
+  -ms-transition: ms-transform .8s ease-in-out, left .8s;
+  transition: transform .8s ease-in-out, left .8s;
+  position: fixed;
+  left: 50px;
+  bottom: 50px;
+
+}
+
+#man:hover {
+  transform: translate(300px) rotate(20deg);
+}
+
+.speech-bubble {
+  font-size: 2rem;
+  position: absolute;
+  display: inline-block;
+  padding: 1.5rem;
+  background: #00cc99;
+  color: #f6f6f6;
+  animation: bounce-in 1s 1;
+  margin-top: 100px;
+  left: 50px;
+}
+
+/*.speech-bubble:after {
+  top: 88%;
+  left: 0;
+  position: absolute;
+  content: '';
+  border: 1.5rem solid;
+  border-color : #00cc99 transparent;
+}*/
