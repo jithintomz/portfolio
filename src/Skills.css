@@ -1,0 +1,36 @@
+#skills{
+    width: 1000px;
+    height: 400px;
+    position: absolute;
+    left: 4700px;
+    top: 100px;
+}
+
+#skills .ct-label {
+    color: #94878a;
+    font-size: 20px
+}
+#skills .ct-point {
+    stroke-width: 20px;
+    animation: point-enlarge 2s;
+    animation-iteration-count: infinite;
+}
+#skills .ct-series-a .ct-point{
+    stroke: #4FC1E9;
+}
+#skills .ct-grid {
+    stroke:  #888;
+    stroke-width: 2px;
+    stroke-dasharray : 8px;
+}
+#skills .ct-series-a .ct-line {
+    stroke-dasharray : 8px;
+}
+
+@keyframes point-enlarge {
+    0%   {stroke-width:15px;}
+    50% {stroke-width:25px;}
+    100% {stroke-width:15px;}
+
+  }
+  

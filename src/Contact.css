@@ -1,0 +1,13 @@
+
+label{
+    color: #ffffff;
+}
+
+#contact{
+    width: 100vh;
+}
+
+#contact input[type=text],input[type=email],textarea{
+    border-radius: 0px;
+    padding: 1.5rem .75rem; 
+}

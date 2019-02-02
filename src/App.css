@@ -1,11 +1,39 @@
 .particle-container {
   background: #17182f;
-  height: 100vh;
+  background-image: url("background.png");
+  background-repeat: repeat-x; 
+  height: 120vh;
+  width: 8500px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: relative;
+
 }
+
+.no-overflow{
+  overflow: hidden !important;
+}
+::-webkit-scrollbar {
+  width: 0px;  /* remove scrollbar space */
+  background: transparent;  /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
 
 canvas {
   display: block;
   vertical-align: bottom;
+}
+
+.moon-container {
+  left: 1100px;
+  position: absolute;
+  top: 20px; 
+}
+
+.contact-container{
+  left: 8500px; 
+  position: absolute;
+  top: 100px
 }
 
 .man-container {}
@@ -13,13 +41,17 @@ canvas {
 #man {
   color: white;
   font-size: 150px;
-  -webkit-transition: webkit-transform .8s ease-in-out, left .8s;
-  -ms-transition: ms-transform .8s ease-in-out, left .8s;
-  transition: transform .8s ease-in-out, left .8s;
+  -webkit-transition: webkit-transform .8s ease-in-out, left .8s, bottom 2s ease-out;
+  -ms-transition: ms-transform .8s ease-in-out, left .8s, bottom 2s ease-out;
+  transition: transform .8s ease-in-out, left .8s, bottom 2s ease-out;
   position: fixed;
   left: 50px;
-  bottom: 50px;
+  top: 75vh;
 
+}
+
+#man.propel{
+  bottom: 1000px;
 }
 
 #man:hover {
@@ -27,7 +59,7 @@ canvas {
 }
 
 .speech-bubble {
-  font-size: 2rem;
+  font-size: 1.5rem;
   position: absolute;
   display: inline-block;
   padding: 1.5rem;
@@ -37,6 +69,48 @@ canvas {
   margin-top: 100px;
   left: 50px;
 }
+
+.company-details {
+  position: absolute;
+  left: 2000px;
+  transition: top 1s;
+  top: 10px; 
+}
+
+.moon-glow {
+  border-radius: 50%;
+  border: none;
+  box-shadow: -2px 0 100px rgb(255,255,240);
+  height: 150px;
+  width: 150px;
+  margin: 100px auto;
+  position: relative;
+  animation: glow 5s;
+  animation-iteration-count: infinite;
+}
+
+
+.moon {
+  background-color: rgb(255,255,240);
+  border-radius: 50%;
+  border: none;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transform: rotate(20deg);
+  animation: glow 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes glow {
+  0% {width: 150px;height: 150x;}
+  50% {width: 153px;height: 153x;}
+  100% {width: 150px;height: 150x;}
+}
+
+
+
+
 
 /*.speech-bubble:after {
   top: 88%;
