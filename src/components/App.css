@@ -1,12 +1,14 @@
 .particle-container {
   background: #17182f;
-  background-image: url("background.png");
+  background-image: url("../assets/background.png");
   background-repeat: repeat-x; 
   height: 120vh;
   width: 8500px;
   overflow-x: auto;
   overflow-y: hidden;
   position: relative;
+  overflow: -moz-scrollbars-none; /* Firefox */
+
 
 }
 
@@ -48,6 +50,18 @@ canvas {
   left: 50px;
   top: 75vh;
 
+}
+
+@keyframes bounce {
+  0% {
+    transform: translate3d(0px, 0px, 0);
+  }
+  50% {
+    transform: translate3d(0px, -4px, 0);
+  }
+  100% {
+    transform: translate3d(0px, 0px, 0);
+  }
 }
 
 #man.propel{

@@ -91,6 +91,27 @@
     word-spacing: 1px;
     color: #888;
   }
+  
+  @media screen and (max-width: 768px) {
+    .timeline-container:before {
+       left: 8px;
+       width: 2px;
+    }
+    .timeline-block {
+       width: 100%;
+       margin-bottom: 30px;
+    }
+    .timeline-block-right {
+       float: none;
+    }
+ 
+    .timeline-block-left {
+       float: none;
+       direction: ltr;
+       text-align: left;
+    }
+ }
+ 
   .scrollToView .timeline-content{
     top: 0px;
   }
